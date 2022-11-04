@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Projekt vom 4.11.</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="">Wie viele Runden</label>
+        <div id="roundChoose">
+            <label for="">
+                <input name="roundChoose" onchange="roundAmounts(value)" value="5" id="radio5" type="radio">5</label>
+            <label for="">
+                <input name="roundChoose" onchange="roundAmounts(value)" value="10" id="radio10" type="radio">10</label>
+            <label for="">
+                <input name="roundChoose" onchange="roundAmounts(value)" value="15" id="radio15" type="radio">15</label>
+            <label for="">
+                <input name="roundChoose" onchange="roundAmounts(value)" value="20" id="radio20" type="radio">20</label>
+        </div>
+        <p>
+        <p id="roundCounter"><span id="played">0</span>/<span id="toplay">0</span></p>
+        </p>
+
+        <p>Result:</p>
+
+        <div id="points">
+            <p>User</p>
+            <p><span id="playerPoint">0</span>:<span id="ComputerPoint">0</span></p>
+            <p>Comp</p>
+        </div>
+        <h4 id="finalResult">Let's Play</h4>
+        <div class="buttons">
+            <button value="playerRock" onclick="play(value, event)" id="Rock">👊</button>
+            <button value="playerPaper" onclick="play(value, event)" id="Paper">🫱</button>
+            <button value="playerScissors" onclick="play(value, event)" id="Scissors">✌️</button>
+        </div>
+
+        <button onclick="resetGame()" id="PlayAgain">Spiele erneut</button>
+
+    </form>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
