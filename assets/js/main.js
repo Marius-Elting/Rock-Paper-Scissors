@@ -53,13 +53,17 @@ function play(value, event) {
         alert("Bitte starte ein Neues Spiel");
         return;
     }
-    buttons.forEach((button) => {
-        button.classList.remove("lose");
-        button.classList.remove("winning");
-        button.classList.remove("draw");
-    });
+    // buttons.forEach((button) => {
+    //     button.classList.remove("lose");
+    //     button.classList.remove("winning");
+    //     button.classList.remove("draw");
+    // });
+    roundChoose.style.display = "none";
+    roundCounter.style.display = "inline";
+
     computer();
     playedRounds++;
+
     switch (value) {
         case "playerRock": playerPlay = "playerRock";
             break;
@@ -67,8 +71,6 @@ function play(value, event) {
             break;
         case "playerScissors": playerPlay = "playerScissors";
     }
-    roundChoose.style.display = "none";
-    roundCounter.style.display = "inline";
 
     if (playerPlay == "playerRock" && computerPlay == "computerRock") {
         littleResult = "Rock vs Rock = Unentschieden!";
@@ -133,7 +135,13 @@ function play(value, event) {
     played.innerHTML = playedRounds;
     finalResultOutput.innerHTML = littleResult;
     showResult();
-
+    setTimeout(() => {
+        buttons.forEach((button) => {
+            button.classList.remove("lose");
+            button.classList.remove("winning");
+            button.classList.remove("draw");
+        });
+    }, 1000);
 }
 
 function roundAmounts(value) {
@@ -189,7 +197,3 @@ function resetGame() {
     roundCounter.style.display = "none";
 
 }
-
-
-
-
