@@ -21,6 +21,7 @@ form {
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    z-index: 1;
 }
 
 #roundCounter {
@@ -154,5 +155,153 @@ input[name="roundChoose"] {
 
     100% {
         border: 5px solid blueviolet
+    }
+}
+
+img {
+    position: absolute;
+    width: 300px;
+    opacity: 0;
+}
+
+.img1 {
+    animation: img1;
+    bottom: -300px;
+    left: -300px;
+    rotate: 135deg;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform: scaleY(-1);
+    opacity: 1;
+}
+
+.img2 {
+    animation: img2;
+    bottom: -300px;
+    right: -300px;
+    rotate: 45deg;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+@keyframes img1 {
+    0% {
+        bottom: -300px;
+        left: -300px;
+    }
+
+
+    50% {
+        bottom: 50vh;
+        left: 40vw;
+    }
+
+
+    100% {
+        bottom: 50vh;
+        left: 50vw;
+    }
+}
+
+@keyframes img2 {
+    0% {
+        bottom: -300px;
+        right: -300px;
+    }
+
+
+    50% {
+        bottom: 50vh;
+        right: 40vw;
+    }
+
+
+    100% {
+        bottom: 50vh;
+        right: 50vw;
+    }
+}
+
+#winningh1div {
+    position:
+        absolute;
+    height: 55vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0;
+}
+
+#winningh1 {
+    /* position: absolute; */
+    /* display: flex; */
+    top: 30vh;
+    left: 45vw;
+    right: 45vw;
+    text-align: center;
+
+    opacity: 0;
+    font-size: 5px;
+}
+
+.winningh1 {
+    animation: h;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 1.9s;
+    animation-fill-mode: forwards;
+}
+
+.lachs {
+    animation: lachs;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 1.9s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes h {
+    0% {
+        opacity: 0;
+        font-size: 5px;
+    }
+
+    100% {
+        font-size: 25px;
+        opacity: 1;
+    }
+}
+
+
+
+#lachs {
+    /* position: absolute; */
+    /* display: flex; */
+    top: 30vh;
+    left: 45vw;
+    right: 45vw;
+    text-align: center;
+
+    opacity: 0;
+    font-size: 5px;
+    color: orange;
+}
+
+@keyframes lachs {
+    0% {
+        opacity: 0;
+        font-size: 5px;
+    }
+
+    100% {
+        font-size: 15px;
+        opacity: 1;
     }
 }

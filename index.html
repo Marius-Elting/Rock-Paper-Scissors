@@ -21,7 +21,8 @@
                 <input name="roundChoose" onchange="roundAmounts(value)" value="15" id="radio15" type="radio">15</label>
             <label for="">
                 <input name="roundChoose" onchange="roundAmounts(value)" value="20" id="radio20" type="radio">20</label>
-        </div>
+        </div><label for=""> <input id="lachsMode" type="checkbox">Lachsmode
+        </label>
         <p>
         <p id="roundCounter"><span id="played">0</span>/<span id="toplay">0</span></p>
         </p>
@@ -43,6 +44,15 @@
         <button onclick="resetGame()" id="PlayAgain">Spiele erneut</button>
 
     </form>
+
+    <div id="win">
+        <div id="winningh1div">
+            <h1 id="winningh1">Glückwunsch du hast <br> Gewonnen!</h1>
+            <p id="lachs">#Lachs</p>
+        </div>
+        <img id="img1" src="./assets/img/animal-g6a2874bce_1280.png" alt="Lachs">
+        <img id="img2" src="./assets/img/animal-g6a2874bce_1280.png" alt="Lachs">
+    </div>
 
     <script src="./assets/js/main.js"></script>
 </body>

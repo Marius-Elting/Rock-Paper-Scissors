@@ -160,14 +160,26 @@ function showResult() {
         if (playerPoints > computerPoints) {
             console.log("Player wins");
             finalResultOutput.innerHTML = "Du Gewinnst";
+            if (document.getElementById("lachsMode").checked) {
+                document.getElementById("lachs").classList.add("lachs");
+                document.getElementById("winningh1").classList.add("winningh1");
+                document.getElementById("img1").classList.add("img1");
+                document.getElementById("img2").classList.add("img2");
+            }
+            finalResultOutput.style.color = "green";
+
         }
         else if (playerPoints < computerPoints) {
             console.log("Computer wins");
             finalResultOutput.innerHTML = "Computer Gewinnt";
+            finalResultOutput.style.color = "red";
+
         }
         else if (playerPoints === computerPoints) {
             console.log("its a draw");
             finalResultOutput.innerHTML = "Leider ein unentschieden";
+            finalResultOutput.style.color = "orange";
+
         }
 
         PlayAgainButton.style.opacity = "1";
