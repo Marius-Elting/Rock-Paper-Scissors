@@ -39,6 +39,10 @@ form {
 
 }
 
+input[name="roundChoose"] {
+    margin-right: 5px
+}
+
 #Rock,
 #Paper,
 #Scissors {

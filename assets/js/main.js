@@ -21,7 +21,7 @@ let roundCounter = document.getElementById("roundCounter");
 console.log(buttons);
 
 function computer() {
-    let mathing = Math.floor((Math.random() * 12) * 1);
+    let mathing = Math.floor((Math.random() * 12) + 1);
     console.log(mathing);
     switch (mathing) {
         case 1:
