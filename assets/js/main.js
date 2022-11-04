@@ -141,7 +141,7 @@ function play(value, event) {
             button.classList.remove("winning");
             button.classList.remove("draw");
         });
-    }, 1000);
+    }, 810);
 }
 
 function roundAmounts(value) {
